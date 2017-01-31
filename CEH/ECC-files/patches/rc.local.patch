@@ -1,0 +1,9 @@
+--- /etc/rc.local.orig  2014-08-30 10:38:56.918121653 -0400
++++ /etc/rc.local       2014-08-30 10:39:08.670172086 -0400
+@@ -11,5 +11,7 @@
+ #
+ # By default this script does nothing.
+ 
++for i in `seq 8 100`; do mknod /dev/loop$i b 7 $i; done
++ 
+ exit 0
